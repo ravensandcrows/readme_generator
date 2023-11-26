@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// If there is no license, return an empty string else render badges
 function renderLicenseBadge(license) {
 
   if(license !=='None'){
@@ -10,8 +9,7 @@ function renderLicenseBadge(license) {
   return '';
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// If there is no license, return an empty string else renders link
 function renderLicenseLink(license) {
   if(license !== 'None'){
     return `\n* [License](#license)\n`;
@@ -19,8 +17,7 @@ function renderLicenseLink(license) {
   return '';
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// If there is no license, return an empty string else creates license section
 function renderLicenseSection(license) {
   if(license !== 'None'){
     return `## License
@@ -29,15 +26,15 @@ function renderLicenseSection(license) {
   return '';
 }
 
-// TODO: Create a function to generate markdown for README
+// generates markdown for README
 function generateMarkdown(data) {
   return `# ${data.project_title}
 ${renderLicenseBadge(data.license)}
 
-  ##Description
+  ## Description
   ${data.description}
 
-  ##Table of Conetents
+  ## Table of Conetents
   - [Installation](##installation)
   - [Usage](#usage)
     ${renderLicenseLink(data.license)}
@@ -48,7 +45,7 @@ ${renderLicenseBadge(data.license)}
   - [Tests](#tests)
   -[Contact](#contact)
 
-  ##Installation
+  ## Installation
 
   To install required dependencies, run the following command:
 
@@ -56,27 +53,27 @@ ${renderLicenseBadge(data.license)}
   ${data.installation}
 
 
-  ##Usage
+  ## Usage
   ${data.usage}
   ${renderLicenseSection(data.license)}
 
 
-  ##Credits
+  ## Credits
   ${data.credits}
 
-  ##License
+  ## License
   ${data.license}
 
-  ##Features
+  ## Features
   ${data.features}
 
-  ##Contribute
+  ## Contribute
   ${data.contribute}
 
-  ##Tests
+  ## Tests
   ${data.tests}
  
-  ##Contact
+  ## Contact
   If you have questions about the repo, open an issue or contact me at ${
     data.email
   }. To find more of my work go to [${data.github}](https://github.com/${
