@@ -12,7 +12,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string else renders link
 function renderLicenseLink(license) {
   if(license !== 'None'){
-    return `\n* [License](#license)\n`;
+    return `* [License](#license)`;
   }
   return '';
 }
@@ -35,15 +35,14 @@ ${renderLicenseBadge(data.license)}
   ${data.description}
 
   ## Table of Conetents
-  - [Installation](##installation)
-  - [Usage](#usage)
-    ${renderLicenseLink(data.license)}
-  - [Credits](#credits)
-  - [License](#license)
-  - [Features](#features)
-  - [Contribute](#contribute)
-  - [Tests](#tests)
-  -[Contact](#contact)
+  * [Installation](##installation)
+  * [Usage](#usage)
+  ${renderLicenseLink(data.license)}
+  * [Credits](#credits)
+  * [Features](#features)
+  * [Contribute](#contribute)
+  * [Tests](#tests)
+  * [Contact](#contact)
 
   ## Installation
 
@@ -60,9 +59,6 @@ ${renderLicenseBadge(data.license)}
 
   ## Credits
   ${data.credits}
-
-  ## License
-  ${data.license}
 
   ## Features
   ${data.features}
