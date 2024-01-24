@@ -35,7 +35,7 @@ ${renderLicenseBadge(data.license)}
   ${data.description}
 
   ## Table of Conetents
-  * [Installation](##installation)
+  * [Installation](#installation)
   * [Usage](#usage)
   ${renderLicenseLink(data.license)}
   * [Credits](#credits)
